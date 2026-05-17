@@ -10,7 +10,7 @@
 #                                                                             #
 # *************************************************************************** #
 
-from . import creatures
+from ex0 import creatures
 from ex0 import CreatureFactory
 
 

@@ -17,7 +17,7 @@ from . import capabilities
 class Sproutling(Creature, capabilities.HealCapability):
     def __init__(self) -> None:
         super().__init__("sproutling", ["grass"])
-        self._attack = "vine whip"
+        self._attack = "vine whip".capitalize()
 
     def attack(self) -> str:
         return f"{self._name} uses {self._attack}!"
@@ -31,7 +31,7 @@ class Sproutling(Creature, capabilities.HealCapability):
 class Bloomelle(Creature, capabilities.HealCapability):
     def __init__(self) -> None:
         super().__init__("bloomelle", ["grass", "fairy"])
-        self._attack = "petal dance"
+        self._attack = "petal dance".capitalize()
 
     def attack(self) -> str:
         return f"{self._name} uses {self._attack}!"
@@ -45,13 +45,13 @@ class Bloomelle(Creature, capabilities.HealCapability):
 class Shiftling(Creature, capabilities.TransformCapability):
     def __init__(self) -> None:
         super().__init__("shiftling", ["normal"])
-        self._attack = "Normal"
+        self._attack = "normal".capitalize()
         self._is_transformed = False
 
     def attack(self) -> str:
         if self._attack == "Normal":
             return f"{self._name} attacks normally"
-        return f"{self._name} performs a boosted strike form!"
+        return f"{self._name} performs a boosted strike!"
 
     def transform(self) -> str:
         if self._is_transformed:
@@ -73,7 +73,7 @@ class Shiftling(Creature, capabilities.TransformCapability):
 class Morphagon(Creature, capabilities.TransformCapability):
     def __init__(self) -> None:
         super().__init__("morphagon", ["normal", "dragon"])
-        self._attack = "Normal"
+        self._attack = "normal".capitalize()
         self._is_transformed = False
 
     def attack(self) -> str:
